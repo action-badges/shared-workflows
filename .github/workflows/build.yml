@@ -6,13 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - run: echo "build_status_message=failing" >> $GITHUB_ENV
       - run: echo "build_status_color=red" >> $GITHUB_ENV
 
       - name: Install Node JS 12
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '12'
 
@@ -77,7 +77,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install
         run: npm ci
@@ -99,7 +99,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Write License badge
         uses: action-badges/package-json-badges@main
