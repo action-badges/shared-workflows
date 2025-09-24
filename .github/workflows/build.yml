@@ -11,10 +11,10 @@ jobs:
       - run: echo "build_status_message=failing" >> $GITHUB_ENV
       - run: echo "build_status_color=red" >> $GITHUB_ENV
 
-      - name: Install Node JS 20
+      - name: Install Node JS 24
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Show Node/NPM versions
         run: |
@@ -76,10 +76,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node JS 20
+      - name: Install Node JS 24
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install
         run: npm ci
